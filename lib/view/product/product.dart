@@ -39,15 +39,11 @@ class MyProduct extends StatelessWidget {
               actions: [
                 IconButton(
                   icon: const Icon(Icons.file_download),
-                  onPressed: () {
-                    // Handle download icon press
-                  },
+                  onPressed: () {},
                 ),
                 IconButton(
                   icon: const Icon(Icons.shopping_cart),
-                  onPressed: () {
-                    // Handle cart icon press
-                  },
+                  onPressed: () {},
                 ),
               ],
             ),

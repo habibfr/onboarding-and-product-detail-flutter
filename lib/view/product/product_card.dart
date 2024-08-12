@@ -61,7 +61,7 @@ class ProductCard extends StatelessWidget {
               ),
             ],
           ),
-          const SizedBox(height: 8),
+          const SizedBox(height: 22),
           const Padding(
             padding: EdgeInsets.symmetric(horizontal: 8.0),
             child: Text(
@@ -121,7 +121,7 @@ class ProductCard extends StatelessWidget {
             ),
           ),
           Container(
-            margin: const EdgeInsets.all(8.0),
+            margin: const EdgeInsets.only(top: 16.0,left: 8, right: 8),
             child: ElevatedButton(
               style: ElevatedButton.styleFrom(
                 backgroundColor: const Color(0xFF242626),

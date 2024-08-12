@@ -3,10 +3,15 @@ import 'package:aksamedia_test_mobile/view/product/product.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_onboarding_slider/flutter_onboarding_slider.dart';
 
-class MyOnboarding extends StatelessWidget {
-  final Color kDarkBlueColor = const Color(0xFF242626);
-
+class MyOnboarding extends StatefulWidget {
   const MyOnboarding({super.key});
+
+  @override
+  State<MyOnboarding> createState() => _MyOnboardingState();
+}
+
+class _MyOnboardingState extends State<MyOnboarding> {
+  final Color kDarkBlueColor = const Color(0xFF242626);
 
   @override
   Widget build(BuildContext context) {
@@ -29,8 +34,6 @@ class MyOnboarding extends StatelessWidget {
           ),
         ),
         trailingFunction: () {
-          // Your trailingFunction logic here
-          // Navigator.pop(context);
           Navigator.push(
             context,
             MaterialPageRoute(builder: (context) => const MyProduct()),
@@ -41,9 +44,21 @@ class MyOnboarding extends StatelessWidget {
         headerBackgroundColor: Colors.white,
         pageBackgroundColor: Colors.white,
         background: [
-          Image.asset('assets/images/img_onboarding_1.png'),
-          Image.asset('assets/images/img_onboarding_2.png'),
-          Image.asset('assets/images/img_onboarding_3.png'),
+          SizedBox(
+            width: MediaQuery.of(context).size.width,
+            child: Image.asset('assets/images/img_onboarding_1.png',
+                fit: BoxFit.cover),
+          ),
+          SizedBox(
+            width: MediaQuery.of(context).size.width,
+            child: Image.asset('assets/images/img_onboarding_2.png',
+                fit: BoxFit.cover),
+          ),
+          SizedBox(
+            width: MediaQuery.of(context).size.width,
+            child: Image.asset('assets/images/img_onboarding_3.png',
+                fit: BoxFit.cover),
+          ),
         ],
         speed: 1.8,
         pageBodies: [
@@ -58,9 +73,7 @@ class MyOnboarding extends StatelessWidget {
                   description:
                       'Nggak bisa jualan? \nJangan khawatir, Tokorame akan membimbing kamu hingga menjadi seller langsung dari ahlinya',
                   buttonText: 'Selanjutnya',
-                  onButtonPressed: () {
-                    // Handle button press for the first page
-                  },
+                  onButtonPressed: () {},
                 ),
               ),
             ],
@@ -76,9 +89,7 @@ class MyOnboarding extends StatelessWidget {
                   description:
                       'Tokorame menyediakan ribuan produk dengan kualitas derbaik dari seller terpercaya',
                   buttonText: 'Selanjutnya',
-                  onButtonPressed: () {
-                    // Handle button press for the first page
-                  },
+                  onButtonPressed: () {},
                 ),
               ),
             ],
@@ -94,9 +105,7 @@ class MyOnboarding extends StatelessWidget {
                   description:
                       'Subdomain unik dan toko online profesional siap pakai',
                   buttonText: 'Selanjutnya',
-                  onButtonPressed: () {
-                    // Handle button press for the first page
-                  },
+                  onButtonPressed: () {},
                 ),
               ),
             ],
